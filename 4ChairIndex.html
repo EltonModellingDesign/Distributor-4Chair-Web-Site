@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Chair Fabricante de Cadeiras</title>
+    <link rel="stylesheet" href="RodapeCAbeçalho.css" type="text/css">
+
+    <style>
+        .seção{
+            background-image: linear-gradient(120deg,#998675c0,#D0C7C0,rgb(243, 243, 243),#D0C7C0);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        /*------Estilos sidebar -----*/
+
+        .estilos{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .estilos h3{
+            font-family: 'Square721 Cn BT';
+            font-weight: lighter;
+            font-size: 30px;
+            color: #333333;
+            margin: 0;
+        }
+        .maskA{
+            position: relative;
+            height: 160px;
+            width: 250px;
+            background-color: white;
+            margin: 25px 0; 
+            overflow: hidden;
+            box-shadow: 2px 2px 1px #C69C6D;
+        }
+
+        .maskA img{height: 100%;width: 100%;bottom: 20px;padding-bottom: 20px;}
+        
+        
+        .detalhe { 
+            position: absolute;
+            height: 300px;
+            width: 250px;
+            padding-top: 70px;
+            transition:570ms;}
+        .detalhe:hover {padding-top: 0;}
+        
+        .textoA{
+        font-family: 'Square721 Cn BT';
+        font-weight: bolder;
+        font-size: 20px;
+        margin-top: 90px;
+        transition: 0.5s;
+        padding:5px;
+        background-image: linear-gradient(90deg, #C1272D 40%,rgba(255, 255, 255, 0));
+        color: white;
+        text-align: left;
+        padding-right: 80px;}
+
+        @media (max-width:1350px) {
+            .estilos{order:3;}
+            .media--Imagens{display: flex;}
+            .maskA{margin: 10px 10px;width: 200px;}
+            .detalhe{padding-top: 30px;}
+
+
+    }
+
+
+        /*-----Wheel----*/
+
+        .tituloC{
+            position: absolute;
+            z-index: 1;
+            font-family: 'Square721 Cn BT';
+            top: 160px;
+            font-size: 40px;
+            color: #333333;
+            -webkit-text-stroke: 1px #FBB03B;
+            white-space: nowrap;
+        }
+
+        .wheel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 260px;
+
+        }
+
+        .new--wheel img{height: 420px;}
+        .wheel--container{
+            position: absolute;
+            display: flex;
+            top: 320px;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+        }
+
+        .maskS {
+            position: absolute;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            width: 300px;
+            clip-path: circle(150px);
+            -webkit-clip-path: circle(150px);
+            overflow: hidden;
+            -webkit-overflow: hidden;
+            
+        }
+        .maskS img{
+            height: 250px;
+            margin-right: 80px;
+            position: absolute;
+        }
+
+        .maskScale{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.432);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 950px;
+            width: 1500px;
+            clip-path: none;
+            -webkit-clip-path: none;
+            overflow: none;
+            -webkit-overflow: none;
+            z-index: 10;
+            
+        }
+        .maskScale img{
+            height: 600px;
+            position: absolute;
+            z-index: 10;
+            
+        }
+
+
+        .maskS img:nth-child(1){z-index: 3;}
+        .maskS img:nth-child(2){z-index: 1;}
+        .maskS img:nth-child(3){z-index: 1;}
+        .maskS svg{
+            position: absolute;
+            fill: #fbb13ba9;
+            height: 50px;
+            bottom: 10px;right: 40px;
+            cursor: pointer;
+            z-index: 4;
+        }
+        .pontos{
+            display: flex;
+            position: absolute;
+            bottom: 65px;
+
+        }
+        .pontosScale{z-index: 10;bottom: -80px;margin-right: 50px;}
+        .ponto{
+            margin: 5px;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: #FBB03B;
+            cursor:pointer;
+        }
+        .pontored{
+            margin: 5px;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: #C1272D;
+        }
+
+        /*---Small Wheels---*/
+
+        
+        .circleP {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;        
+            background-color: #C1272D;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            cursor: pointer;
+
+        }
+        .circleP img{height: 100px;width: 100px;display: absolute;transition: 530ms;}
+        
+        .circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;            
+            background-color: #FBB03B;
+            position:absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            cursor: pointer;
+
+        }
+        .circle img{height: 80px;width: 80px;display: absolute;transition: 530ms;}
+        .circle img:hover{height: 100px;width: 100px;display: absolute;transition: 530ms;}
+
+        .circleP:nth-child(1){top: 162px;left: 345px;}
+        .circleP:nth-child(2){top: 162px;right: 345px;}
+        .circleP:nth-child(3){top: 369px;right: 135px;}
+        .circleP:nth-child(4){bottom: 369px;right: 135px;}
+        
+        .circle:nth-child(1){top: 168px;left: 350px;}
+        .circle:nth-child(2){top: 168px;right: 350px;}
+        .circle:nth-child(3){top: 375px;right: 140px;}
+        .circle:nth-child(4){bottom: 375px;right: 140px;}
+        
+
+        @media (max-width:1350px) {
+            .wheel{order:1;}
+            .ponto, .pontored{margin: 10px;padding: 10px;}
+            .pontos{bottom: 50px;}
+            .maskScale{height: 600px;max-width: 500px;overflow: none;-webkit-overflow:none;clip-path: none;-webkit-clip-path:none;}
+            .maskScale img{height: 350px;}
+            .pontosScale{margin-right: 0;bottom: -80px;}
+        }
+
+
+
+
+        
+
+
+
+        /*------Informações-----*/
+
+        .titulo1{
+            margin-top: 100px;
+            margin-left: 20px;
+            color: #C1272D;
+            font-family: 'Square721 Cn BT';
+            font-size: 30px;
+            
+        }
+        .preços{display: flex;color: #333333;}
+        .textos1{
+            display: flex;
+            flex-direction: column;
+            padding: 2px 10px;
+            height: 100%;
+            border: solid 1px #A67C52;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .textos1 span{font-family: 'Myriad Pro', sans-serif;text-align: center;font-size: 14px;}
+        .textos1 span:nth-child(1){font-size: 30px;}
+        .textos2{
+            display: flex;
+            flex-direction: column;
+            padding: 5px 10px;
+            border: solid 1px #A67C52;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .textos2 span{font-family: 'Myriad Pro', sans-serif;text-align: center;font-size: 14px;}
+        .textos2 span:nth-child(2){font-size: 45px;}
+
+        .botão{float: right;margin-top: 40px;margin-right: 50px;}
+        .botão button{background-color: #C1272D;padding: 10px;border-radius: 5px;border:none;}
+        .botão a{font-family: 'Myriad Pro', sans-serif;text-decoration: none;color: white;font-size: 25px;}
+        
+        .textão{
+            display: inline-block;
+            margin-right: 20px;
+            margin-top: 50px;
+        }
+        .titulo2{
+
+            color: #C1272D;
+            font-family: 'Square721 cn BT';
+            font-weight: lighter;
+            font-size: 30px;}
+        .Lorem{
+            font-family: 'Myriad Pro', sans-serif;
+            display: inline-block;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            color: #333333;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        @media (max-width:1350px) {
+            .Informações{order: 2;margin: 0 20px;margin-top: 30px;}
+            .titulo1{margin-top: 0;}
+            .Lorem{font-size: 20px;}
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="cabeçalho">
+        <label for="nav-toggle">
+            <figure class="toggle">
+                <ion-icon name="reorder-four-outline"></ion-icon>
+            </figure>
+        </label>
+        <input type="checkbox"  id="nav-toggle"  class="checkbox">
+        <nav class="menu">
+            <a href="#">Nossos Produtos</a>
+            <span class="traço">|</span>
+            <a href="#">Quem Somos</a>
+            <span class="traço">|</span>
+            <a href="#">Nossos Fornecedores</a>
+            <span class="traço">|</span>
+            <a href="#">Entre em Contato</a>         
+        </nav>
+        <figure class="Logo">
+            <a href="#">
+                <img src="conteudo/Cabeçalho/4 Chair Logo.svg" title="Home" height="100px" width="100px">
+            </a>
+        </figure>
+    </header>
+    <section class="seção">
+        <div class="estilos" id="estilos">
+            <h3>Escolha o seu estilo</h3>
+            <div class="media--Imagens">
+                <figure class="maskA">
+                    <span class="detalhe">
+                        <p class="textoA">Padrão</p>
+                    </span>
+                    <img src="conteudo/Seções/Cadeira41.jpg" title="Padrão">
+                </figure>
+                <figure class="maskA">
+                    <span class="detalhe">
+                        <p class="textoA">Escolha as cores</p>
+                    </span>
+                    <img src="conteudo/Seções/Cadeira42.jpg" title="Cores">
+                </figure>
+            </div>
+        </div>
+        <nav class="wheel">
+            <h3 class="tituloC">Veja os principais modelos</h3>
+            <div class="wheel--container">
+                <div class="new--wheel">
+                    <img src="conteudo/Seções/Wheel.svg" title="Mostruario">
+                </div>
+                <figure class="maskS" id="slide-imagens">
+                    <img src="conteudo/Seções/Cadeira4P.jpg" title="Mostruario">
+                    <img src="conteudo/Seções/Cadeira41.jpg" title="Mostruario">
+                    <img src="conteudo/Seções/Cadeira42.jpg" title="Mostruario">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Camada_2" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+                        <g>
+                            <path d="M489.9,239.2l-84-84h-14.9v35.1c0,8.4-6.9,15.4-15.4,15.4h-80.1v-79.9c0-8.5,6.9-15.4,15.4-15.4h35.3V95.6l-84.2-84   c-5.9-6.2-15.6-6.2-21.8,0l-84,84v14.9h35.1c8.4,0,15.4,6.9,15.4,15.4v80.1h-79.9c-8.5,0-15.4-6.9-15.4-15.4v-35.3H96.7l-84,84.2   c-6.2,5.9-6.2,15.6,0,21.8l84,84h14.9v-35.1c0-8.5,6.9-15.4,15.4-15.4H207v79.9c0,8.5-6.9,15.4-15.4,15.4h-35.3v14.9l84.2,84   c5.9,6.2,15.6,6.2,21.8,0l84-84V390h-35.1c-8.4,0-15.4-6.9-15.4-15.4v-80.1h79.9c8.5,0,15.4,6.9,15.4,15.4v35.3H406l84-84.2   C496.1,255.1,496.1,245.4,489.9,239.2z M238.5,263v-25.6h25.6V263H238.5z"/>
+                        </g>
+                    </svg>
+                </figure>
+                <div class="pontos" id="pontos">
+                    <span class="pontored"></span>
+                    <span class="ponto"></span>
+                    <span class="ponto"></span>
+                </div>
+                <div class="imagensC" id = 'botõesP'>
+                    <figure class="circleP" id = 'botãoConfort'>
+                        <img src="conteudo/Seções/Cadeira4.png" title="Mostruario">
+                    </figure>
+                    <figure class="circle" id = 'botãoClassic'>
+                        <img src="conteudo/Seções/Cadeira1.png" title="Mostruario" height="100px" width="100px">
+                    </figure>
+                    <figure class="circle" id = 'botãoModern'>
+                        <img src="conteudo/Seções/Cadeira2.png" title="Mostruario" height="100px" width="100px">
+                    </figure>
+                    <figure class="circle" id = 'botõesStandart'>
+                        <img src="conteudo/Seções/Cadeira3.png" title="Mostruario" height="100px" width="100px">
+                    </figure>
+                </div>                
+            </div>
+        </nav>
+        <div class="Informações" id = 'informações'>
+            <h3 class="titulo1"><ins>Cadeira Confort</ins></h3>
+            <div class="preços">
+                <div class="textos1">
+                    <span>R$ 39,80</span>
+                    <span>Valor unitário</span>
+                </div>
+                <div class="textos2">
+                    <span>Minimo 10 unidades</span>
+                    <span>R$ 398</span>
+                </div>
+            </div>
+            <div class="botão">
+                <button><a href="#">Fazer Pedido</a></button>
+            </div>
+            <div class="textão">
+                <span class="titulo2">Motivos para comprar essa cadeira</span>
+                <span class="Lorem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
+            </div>
+
+        </div>
+    </section>
+    <footer class="rodape">
+        <div class="text1">
+            <H3>Páginas</H3>
+            <a>
+                <a href="#">. Nossos Produtos
+                <br href="#">. Quem Somos
+                <br href="#">. Nossas Unidades
+                <br href="#">. Entre em contato
+            </a>                
+        </div>
+        <div class="text2">
+            <H3>Informações</H3>
+            <p>
+                Empresa Tom’s Store Solutions<br>
+                CNPJ: 003.4584.154-59<br>
+                Cidade São Paulo/SP<br>
+                Rua Semerino Intra Cep:035-850<br>
+                Bairro: Tatuape<br>
+            </p>
+        </div>
+        <div class="text4">
+            <H3>Support</H3>
+            <p> SAC <br> Tel: 0800 7776-9255<br>Whats:<br>(11) 99336-5689</p>
+            <p>Ouvidoria Tel: <br> 0800-7779-6668</p>
+        </div>
+        <div class="text5">
+            <H3>Selos</H3>
+            <a href="#"><img src="Conteudo/Rodapé/site protegido.png" alt="site-protegido" weidth="216,44" height="113,77"></a>
+        </div>
+        <div class="text6">
+            <H5>Redes Sociais</H5>
+            <a href="#"><img src="Conteudo/Rodapé/facebook.png" alt="facebook" weidth="216,44" height="113,77"></a>
+            <a href="#"><img src="Conteudo/Rodapé/Instagran transparente.png" alt="Instagram" weidth="216,44" height="113,77"></a>
+        </div>
+    </footer> 
+    <script src="4ChairJS.js"></script> 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
+</body>
+</html>
